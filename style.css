@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Cairo', sans-serif;
+    color: #ffffff; /* White text for contrast */
+    text-align: center;
+    overflow: hidden; /* Prevent scrollbars if background fits */
+}
+
+body {
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.65); /* Slightly adjusted overlay */
+    padding: 40px 30px;
+    border-radius: 15px;
+    max-width: 600px;
+    margin: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    /* Increased backdrop blur */
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+    animation: fadeInContainer 1s ease-out;
+}
+
+.logo {
+    max-width: 200px; /* Adjusted size */
+    height: auto;
+    margin-bottom: 25px;
+    /* Added simple animation */
+    animation: logoPulse 4s infinite ease-in-out;
+}
+
+h1 {
+    font-size: 2.6em;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #e0e0e0;
+}
+
+/* Countdown Timer Styles */
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.time-unit {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px 15px;
+    border-radius: 8px;
+    min-width: 80px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.time-unit span:first-child {
+    display: block;
+    font-size: 2.2em;
+    font-weight: bold;
+    color: #ffffff;
+    line-height: 1.1;
+}
+
+.time-unit span:last-child {
+    font-size: 0.8em;
+    text-transform: uppercase;
+    color: #bdbdbd;
+    margin-top: 2px;
+}
+/* End Countdown Timer Styles */
+
+.cta-button {
+    display: inline-block;
+    background-color: #1a73e8; /* Blue color from previous examples */
+    color: #ffffff;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.cta-button:hover {
+    background-color: #155ab6;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Animations */
+@keyframes fadeInContainer {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes logoPulse {
+    0% { transform: scale(1); opacity: 0.9; }
+    50% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.9; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 20px;
+        max-width: 90%;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    .logo {
+        max-width: 180px;
+    }
+    p {
+        font-size: 1em;
+    }
+    #countdown {
+        gap: 10px;
+    }
+    .time-unit {
+        padding: 8px 12px;
+        min-width: 70px;
+    }
+    .time-unit span:first-child {
+        font-size: 1.8em;
+    }
+    .cta-button {
+        font-size: 1em;
+        padding: 10px 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.6em;
+    }
+    .logo {
+        max-width: 140px;
+    }
+    p {
+        font-size: 0.9em;
+    }
+    #countdown {
+        gap: 8px;
+    }
+    .time-unit {
+        padding: 6px 10px;
+        min-width: 60px;
+    }
+    .time-unit span:first-child {
+        font-size: 1.5em;
+    }
+    .time-unit span:last-child {
+        font-size: 0.7em;
+    }
+    .cta-button {
+        font-size: 0.9em;
+        padding: 8px 20px;
+    }
+}
+

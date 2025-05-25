@@ -1,9 +1,9 @@
 // Final Countdown Timer Script
 
 function startCountdown() {
-    // Set the date we're counting down to (3 months from now)
-    const countDownDate = new Date();
-    countDownDate.setMonth(countDownDate.getMonth() + 3);
+    // Set the date we're counting down to (fixed date: August 25, 2025)
+    // تاريخ ثابت لا يتغير مع تحديث الصفحة (25 أغسطس 2025)
+    const countDownDate = new Date('2025-08-25T03:17:00Z').getTime();
 
     // Update the count down every 1 second
     const x = setInterval(function() {
@@ -54,4 +54,3 @@ function startCountdown() {
 
 // Start the countdown when the page loads
 document.addEventListener('DOMContentLoaded', startCountdown);
-
